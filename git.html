@@ -1,0 +1,237 @@
+<html>
+<head>
+<title>Git Quick Reference</title>
+<style type="text/css">
+<!--
+ .tab { margin-left: 25px; margin-top: -10px; }
+ .heading { color: seagreen; }
+ .command { border: 1px solid lightgray; border-collapse: collapse; }
+ .command td { border: 1px solid lightgray; padding: 5px; }
+ .command td.code { border: 1px solid lightgray; padding: 5px; font-family: Courier; background-color: bisque; }
+-->
+</style>
+</head>
+<body>
+<h1>Git Quick Reference</h1>
+<a id="top">Git commands:</a>
+<div class="tab">
+ <br><a href="#init">git init</a>
+ <br><a href="#clone">git clone</a>
+ <br><a href="#status">git status</a>
+ <br><a href="#add">git add</a>
+ <br><a href="#commit">git commit</a>
+ <br><a href="#push">git push</a>
+ <br><a href="#fetch">git fetch</a>
+ <br><a href="#pull">git pull</a>
+ <br><a href="#branch">git branch</a>
+ <br><a href="#checkout">git checkout</a>
+ <br><a href="#merge">git merge</a>
+ <br><a href="#cherry-pick">git cherry-pick</a>
+ <br><a href="#mv">git mv</a>
+ <br><a href="#log">git log</a>
+ <br><a href="#reset">git reset</a>
+ <br><a href="#revert">git revert</a>
+</div>
+<br>
+<p>
+<b class="heading"><a id="init">git init</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git init</td>
+   <td>Initialize a local repository.</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="clone">git clone</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git clone &lt;repository&gt;</td>
+   <td>Clone a remote repository.</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="status">git status</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git status</td>
+   <td>Current status of the repository.</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="add">git add</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git add &lt;files&gt;</td>
+   <td>Put named files in the staging area (for commit)</td>
+  </tr>
+  <tr>
+   <td class="code">git add .</td>
+   <td>Put all modified files in the staging area (for commit)</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="commit">git commit</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git commit -m "&lt;comment&gt;"</td>
+   <td>Commit changes with specified comment</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="push">git push</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git push</td>
+   <td>Push commits to remote repository.</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="fetch">git fetch</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git fetch</td>
+   <td>Fetch remote repository information.</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="pull">git pull</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git pull</td>
+   <td>Pull in changes from the remote repository.</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="branch">git branch</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git branch</td>
+   <td>List branches.</td>
+  </tr>
+  <tr>
+   <td class="code">git branch -b &lt;branch_name&gt;</td>
+   <td>Create named branch.</td>
+  </tr>
+  <tr>
+   <td class="code">git branch -d &lt;branch_name&gt;</td>
+   <td>Delete named branch.</td>
+  </tr>
+  <tr>
+   <td class="code">git branch -D &lt;branch_name&gt;</td>
+   <td>Force-delete named branch.</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="checkout">git checkout</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git checkout &lt;branch&gt;</td>
+   <td>Checkout the named branch</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="merge">git merge</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git merge &lt;branch1&gt; &lt;branch2&gt;</td>
+   <td>Merge changes from one branch to another.</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="cherry-pick">git cherry-pick</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git cherry-pick &lt;commit-SHA&gt;</td>
+   <td>Select specific changes to be merged from one branch to another.</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="mv">git mv</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git mv &lt;file1&gt; &lt;file2&gt;</td>
+   <td>Rename file1 to file2.</td>
+  </tr>
+  <tr>
+   <td class="code">git mv &lt;file&gt; &lt;directory&gt;</td>
+   <td>Move file into directory.</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="log">git log</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git log</td>
+   <td>?</td>
+  </tr>
+  <tr>
+   <td class="code">git log --oneline</td>
+   <td>?</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="reset">git reset</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git reset</td>
+   <td>?</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+<p>
+<b class="heading"><a id="revert">git revert</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git revert</td>
+   <td>?</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+</body>
+</html>
