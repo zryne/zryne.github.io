@@ -233,5 +233,18 @@
  </table>
  Go to <a href="#top">top</a>.
 </div>
+
+<p>
+<b class="heading"><a id="revert">git reflog</a></b>
+<div class="tab">
+ <table class="command">
+  <tr>
+   <td class="code">git reflog --date=local <branch> | tail -1 | grep -o -P '(?<={).*(?=})'</td>
+   <td>The 'tail -1' picks the oldest entry; hopefully that is the creation date. The 'grep ...' command parses and shows the date between { and }.</td>
+  </tr>
+ </table>
+ Go to <a href="#top">top</a>.
+</div>
+
 </body>
 </html>
