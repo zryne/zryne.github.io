@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Java Data Structures</title>
+  <style>
+   body {
+    background-color: powderblue;
+   }
+   h3 {
+    color: blue;
+   }
+   p {
+    color: red;
+   }
+   table, th, td {
+    border: 1px solid #999999;
+    border-collapse: collapse;
+   }
+   .small {
+    font-size: 75%;
+   }
+   .blank {
+    background-color: #ACACAC;
+    color: #666666;
+    font-size: 75%;
+   }
+   .time {
+    color: #800000;
+   }
+   .info {
+    color: #FF0000;
+   }
+   .occupied {
+    background-color: #BB0000;
+   }
+   .code {
+    font-family: courier;
+    font-size: 75%;
+    color: #557755;
+   }
+   thead, tfoot {
+    background-color: #CCCCCC;
+    color: #0F0F0F;
+   }
+  </style>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+ </head>
+ <body>
+  <h3>Java Data Structures</h3>
+  <table>
+   <thead>
+    <tr>
+     <th>Data Structure</th>
+     <th>ArrayList</th>
+     <th>LinkedList</th>
+     <th>HashMap</th>
+     <th>HashSet</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <th>Package</th>
+     <td class="code">java.util.ArrayList</td>
+     <td class="code">java.util.LinkedList</td>
+     <td class="code">java.util.HashMap</td>
+     <td class="code">java.util.HashSet</td>
+    </tr>
+    <tr>
+     <th>Initialization</th>
+     <td class="code">ArrayList &lt;String&gt; myAL = new ArrayList &lt;String&gt;()</td>
+     <td class="code">LinkedList &lt;String&gt; myLL = new LinkedList &lt;String&gt;()</td>
+     <td class="code">HashMap &lt;String, Integer&gt; myHM = new HashMap &lt;String, Integer&gt;()</td>
+     <td class="code">HashSet &lt;String&gt; myHS = new HashSet &lt;String&gt;()</td>
+    </tr>
+    <tr>
+     <th>Add</th>
+     <td class="code">myAL.add("First")</td>
+     <td class="code">myLL.add("First")</td>
+     <td class="code">myHM.put("First", 1)</td>
+     <td class="code">myHS.add("First")</td>
+    </tr>
+    <tr>
+     <th>Read</th>
+     <td class="code">myAL.get(0)</td>
+     <td class="code"></td>
+     <td class="code">myHM.get("First")</td>
+     <td class="code"></td>
+    </tr>
+    <tr>
+     <th>Write</th>
+     <td class="code">myAL.set(0, "First again")</td>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code"></td>
+    </tr>
+    <tr>
+     <th>Remove</th>
+     <td class="code">myAL.remove(0)</td>
+     <td class="code"></td>
+     <td class="code">myHM.remove("First")</td>
+     <td class="code">myHS.remove("First")</td>
+    </tr>
+    <tr>
+     <th>Remove All</th>
+     <td class="code">myAL.clear()</td>
+     <td class="code">myLL.clear()</td>
+     <td class="code">myHM.clear()</td>
+     <td class="code">myHS.clear()</td>
+    </tr>
+    <tr>
+     <th>Size</th>
+     <td class="code">myAL.size()</td>
+     <td class="code">myLL.size()</td>
+     <td class="code">myHM.size()</td>
+     <td class="code">myHS.size()</td>
+    </tr>
+    <tr>
+     <th>Iterate</th>
+     <td class="code">
+      for (int i = 0; i &lt; myAL.size(); i++) { System.out.println(myAL.get(i); }
+      <br>
+      for (String i : myAL) { System.out.println(i); }
+     </td>
+     <td class="code"></td>
+     <td class="code">
+      for (String i : myHM.keySet()) { System.out.println(i); }
+      <br>
+      for (int i : myHM.values()) { System.out.println(i); }
+     </td>
+     <td class="code">
+      for (int i : myHS) { System.out.println(i); }
+     </td>
+    </tr>
+    <tr>
+     <th>Additional</th>
+     <td class="code"></td>
+     <td class="code">
+      myLL.addFirst()
+      <br>
+      myLL.addLast()
+      <br>
+      myLL.removeFirst()
+      <br>
+      myLL.removeLast()
+      <br>
+      myLL.getFirst()
+      <br>
+      myLL.getLast()
+     </td>
+     <td class="code"></td>
+     <td class="code">myHS.contains("First")</td>
+    </tr>
+    <tr>
+     <th>Sort</th>
+     <td class="code">
+      import java.util.Collections;
+      <br>
+      Collections.sort(myAL);
+     </td>
+     <td class="code"></td>
+     <td class="code"></td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>
