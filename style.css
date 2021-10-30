@@ -1,0 +1,44 @@
+   body {
+    background-color: black;
+    color: green;
+   }
+   h2 {
+    color: green;
+   }
+   p {
+    color: red;
+   }
+   table, th, td {
+    border: 2px dashed #333333;
+    border-collapse: collapse;
+    vertical-align: top;
+    text-align: left;
+   }
+   th {
+    color: maroon;
+   }
+   td {
+    padding: 5px;
+   }
+   thead, tfoot {
+    color: yellow;
+   }
+   .small {
+    font-size: 75%;
+   }
+   .code {
+    font-family: courier;
+    font-size: 100%;
+    color: yellow;
+   }
+   .comment {
+    font-family: courier;
+    font-size: 75%;
+    color: #aaaaaa;
+   }
+
+ .tab { margin-left: 25px; margin-top: -10px; }
+ .heading { color: seagreen; }
+ .command { border: 1px solid lightgray; border-collapse: collapse; }
+ .command td { border: 1px solid lightgray; padding: 5px; }
+ .command td.code { border: 1px solid lightgray; padding: 5px; font-family: Courier; background-color: bisque; }

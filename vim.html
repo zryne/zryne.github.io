@@ -1,0 +1,64 @@
+<html>
+<head>
+ <title>Vim Quick Reference</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+ <h1>Vim Quick Reference</h1>
+ <table>
+  <tr>
+   <th rowspan="1">Find</th>
+   <td class="code">:/&lt;word&gt;<br>n<br>Shft+n</td>
+   <td>Highlight all "word" in the current file.<br>Go to next "word".<br>Go to previous "word".</td>
+  </tr>
+  <tr>
+   <th rowspan="5">Substitution</th>
+   <td class="code">:%s/\s\+/\r/g</td>
+   <td>Replace spaces (one or contiguous) with newlines in the whole file.</td>
+  </tr>
+  <tr>
+   <td class="code">:%s/\s\+/\r/gc</td>
+   <td>Replace spaces (one or contiguous) with newlines in the whole file, confirming each.</td>
+  </tr>
+  <tr>
+   <td class="code">:g/red/s/blue/green</td>
+   <td>Replace "blue" with "green" in lines that contain "red".</td>
+  </tr>
+  <tr>
+   <td class="code">:g!/red/s/blue/green</td>
+   <td>Replace "blue" with "green" in lines that do NOT contain "red".</td>
+  </tr>
+  <tr>
+   <td class="code">~</td>
+   <td>Change the character's case under the cursor.</td>
+  </tr>
+  <tr>
+   <th rowspan="3">File Handling</th>
+   <td class="code">:split &lt;file&gt;<br>ctrl+w</td>
+   <td>Open another file named "file" in split window.<br>Toggle between the two.</td>
+  </tr>
+  <tr>
+   <td class="code">gf</td>
+   <td>Edit the file under the cursor.</td>
+  </tr>
+  <tr>
+   <td class="code">:r! &lt;cmd&gt;</td>
+   <td>Execute the &lt;cmd&gt; and insert output at the cursor.</td>
+  </tr>
+  <tr>
+   <th rowspan="2">Sorting</th>
+   <td class="code">:!sort</td>
+   <td>Sort (in ascending order) all lines in the current file.</td>
+  </tr>
+   <td class="code">:2,7!sort</td>
+   <td>Sort (in ascending order) only lines 2-7 in the current file.</td>
+  <tr>
+  </tr>
+  <tr>
+   <th></th>
+   <td></td>
+   <td></td>
+  </tr>
+ </table>
+</body>
+</html>
