@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Programming Languages</title>
+  <style>
+   body {
+    background-color: black;
+    color: green;
+   }
+   h2 {
+    color: green;
+   }
+   p {
+    color: red;
+   }
+   table, th, td {
+    border: 2px dashed #333333;
+    border-collapse: collapse;
+    vertical-align: top;
+    text-align: left;
+   }
+   th {
+    color: maroon;
+   }
+   td {
+    padding: 5px;
+   }
+   thead, tfoot {
+    color: yellow;
+   }
+   .small {
+    font-size: 75%;
+   }
+   .code {
+    font-family: courier;
+    font-size: 100%;
+   }
+   .comment {
+    font-family: courier;
+    font-size: 75%;
+    color: #aaaaaa;
+   }
+  </style>
+ </head>
+ <body>
+  <h2>Code Comparison: C, C++, Java, Python, JavaScript</h2>
+  <table>
+   <thead>
+    <tr>
+     <th></th>
+     <th>C</th>
+     <th>C++</th>
+     <th>Java</th>
+     <th>Python</th>
+     <th>JavaScript</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <th>Hello World</th>
+     <td class="code">
+<pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf ("%s\n", "Hello World!");
+    return 0;
+}
+</pre>
+     </td>
+     <td class="code">
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    cout &lt;&lt; "Hello World!" &lt;&lt; endl;
+    return 0;
+}
+</pre>
+      </td>
+     <td class="code">
+<pre>
+class HelloWorldApp {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+</pre>
+     </td>
+     <td class="code">
+<pre>
+print('Hello world!')
+</pre>
+     </td>
+     <td class="code">
+<pre>
+alert('Hello, world!');
+</pre>
+     </td>
+    </tr>
+    <tr>
+     <th>Standard I/O</th>
+     <td class="code">
+<pre>
+#include &lt;stdio.h&gt;
+printf ("%s\n", "Hello World!");
+</pre>
+     </td>
+     <td class="code">
+<pre>
+#include &lt;iostream&gt;
+using namespace std;
+cout &lt;&lt; "Hello World!" &lt;&lt; endl;
+</pre>
+     </td>
+     <td class="code">
+<pre>
+System.out.print("Hello World!");
+System.out.println("Hello World!");
+</pre>
+     </td>
+     <td class="code">
+<pre>
+print('Hello world!')<code class="comment">           # automatically adds end-of-line</code>
+print('Hello world!', end='\n')<code class="comment"> # manually adds end-of-line</code>
+print('Hello world!', end='')<code class="comment">   # end-of-line not added</code>
+</pre>
+     </td>
+     <td class="code"></td>
+    </tr>
+    <tr>
+     <th>Conditional</th>
+     <td class="code">
+<pre>
+</pre>
+     </td>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code">
+<pre>
+if condition1:
+    ...
+elif condition2:
+    ...
+else:
+    ...
+</pre>
+     </td>
+     <td class="code"></td>
+    </tr>
+    <tr>
+     <th>Loop</th>
+     <td class="code">
+<pre>
+</pre>
+     </td>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code">
+<pre>
+for x in range(3):
+    print(x)
+
+for x in range(1, 3):
+    print(x)
+
+for x in range(1, 9, 3):
+    print(x)
+
+for x in 'Hello World':
+    print(x)
+
+while True:
+    ...
+</pre>
+     </td>
+     <td class="code"></td>
+    </tr>
+    <tr>
+     <th>Function</th>
+     <td class="code">
+<pre>
+</pre>
+     </td>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code">
+<pre>
+def hello_world():
+    print('Hello World!')
+
+def get_sum(m, n):
+    return (m + n)
+</pre>
+     </td>
+     <td class="code"></td>
+    </tr>
+    <tr>
+     <th>Exception Handling</th>
+     <td class="code">
+<pre>
+</pre>
+     </td>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code">
+<pre>
+try:
+    ...<code class="comment">  # execute</code>
+except [exception]:
+    ...<code class="comment">  # execute if exception is raised</code>
+else:
+    ...<code class="comment">  # execute if no exception is raised</code>
+finally:
+    ...<code class="comment">  # execute whether exception is raised or not</code>
+</pre>
+     </td>
+     <td class="code"></td>
+    </tr>
+    <tr>
+     <th>File I/O</th>
+     <td class="code">
+<pre>
+</pre>
+     </td>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code">
+<pre>
+fout = open('out.txt', 'w')<code class="comment">  # open file to write</code>
+fout.write('Hello world!\n')
+fout.close()
+</pre>
+     </td>
+     <td class="code"></td>
+    </tr>
+    <tr>
+     <th>File/Directory Handling</th>
+     <td class="code">
+<pre>
+</pre>
+     </td>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code">
+<pre>
+import os
+
+os.rename('test_1.txt', 'test_2.txt')
+os.remove('test_2.txt')
+os.mkdir('test_dir')
+os.chdir('test_dir')
+os.getcwd()
+os.rmdir('test_dir')
+</pre>
+     </td>
+     <td class="code"></td>
+    </tr>
+    <tr>
+     <th>Command-line Arguments</th>
+     <td class="code">
+<pre>
+</pre>
+     </td>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code">
+<pre>
+import sys, getopt
+
+print('# of arguments: ', len(sys.argv))
+print('Argument list: ', str(sys.argv))
+try:
+    opts, args = getopt.getopt(sys.argv[1:], 'hi:o:', ['ifile=', 'ofile='])
+except getopt.GetoptError:
+    print('test.py -i input_file - o output_file')
+    sys.exit(2)
+inputfile = ''
+outputfile = ''
+for opt, arg in opts:
+    if opt == '-h':
+        print('test.py -i input_file -o output_file')
+        sys.exit()
+    elif opt in ('-i' '--ifile'):
+        inputfile = arg
+    elif opt in ('-o' '--ofile'):
+        outputfile = arg
+print('Input = ', inputfile)
+print('Output = ', outputfile)
+</pre>
+     </td>
+     <td class="code"></td>
+    </tr>
+    <tr>
+     <th>Object Oriented Programming</th>
+     <td class="code">
+<pre>
+</pre>
+     </td>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code">
+<pre>
+<code class="comment"># 1) Class:</code>
+import math
+
+class Circle:
+    def __init__(self):
+        self.radius = 0
+    def set_radius(self, radius):
+        self.radius = radius
+    def get_radius(self):
+        return self.radius
+    def get_diameter(self):
+        return 2 * self.radius
+    def get_circumference(self):
+        return 2 * math.pi * self.radius
+    def get_area(self):
+        return math.pi * math.pow(self.radius, 2)
+
+<code class="comment"># 2) Inherited class:</code>
+import math
+
+from circle import Circle
+class Sphere(Circle):
+    def __init__(self):
+        super().__init__()
+    def set_radius(self, radius):
+        super().set_radius(radius)
+    def get_radius(self):
+        return super().get_radius()
+    def get_diameter(self):
+        return super().get_diameter()
+    def get_circumference(self):
+        return super().get_circumference()
+    def get_area(self):
+        return 4 * super().get_area()
+    def get_volume(self):
+        return 4/3 * math.pi * math.pow(self.radius, 3)
+
+<code class="comment"># 3) The main:</code>
+from circle import Circle
+from sphere import Sphere
+
+def main():
+    c = Circle()
+    c.set_radius(5)
+    print('Circle radius = ' + str(c.get_area()))
+
+<code class="comment"># 4) Starting point (aka, calling main):</code>
+def main():
+    print('Hello World!')
+if __name__=='__main__':
+    main()
+
+</pre>
+     </td>
+     <td class="code"></td>
+    </tr>
+    <tr>
+     <th>Operators</th>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code"></td>
+    </tr>
+   </tbody>
+  </table>
+ </body>
+</html>
