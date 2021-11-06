@@ -111,12 +111,13 @@ print('Hello world!')
 </pre>
      </td>
     </tr>
+
     <tr>
-     <th>Standard I/O</th>
+     <th rowspan="2">Standard I/O</th>
      <td class="code">
 <pre>
 #include &lt;stdio.h&gt;
-printf ("%s\n", "Hello World!");
+printf("%s\n", "Hello World!");
 </pre>
      </td>
      <td class="code">
@@ -140,6 +141,38 @@ print('Hello world!', end='\n')
 print('Hello world!', end='')
 </pre>
      </td>
+    </tr>
+    <tr>
+     <td class="code">
+<pre>
+#include &lt;stdio.h&gt;
+char name[10];
+scanf("%s", name);
+</pre>
+     </td>
+     <td class="code">
+<pre>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+string name;
+cin &gt;&gt; name;
+</pre>
+     </td>
+     <td class="code">
+<pre>
+import java.util.Scanner;
+
+Scanner scan = new Scanner(System.in);
+String name = scan.nextLine();
+</pre>
+     </td>
+     <td class="code">
+<pre>
+var name = window.prompt("Enter name: ");
+</pre>
+     </td>
+     <td class="code"></td>
     </tr>
     <tr>
      <th rowspan="3">Conditional</th>
@@ -436,6 +469,10 @@ print('Output = ', outputfile)
      <th>Object Oriented Programming</th>
      <td class="code">
 <pre>
+<code class="comment">// Disclaimer:</code>
+<code class="comment">// C is not an object-oriented language!</code>
+<code class="comment">// The closest concept is a structure.</code>
+
 #include &lt;stdio.h&gt;
 
 struct Circle
