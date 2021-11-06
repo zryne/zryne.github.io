@@ -40,10 +40,22 @@
     font-size: 75%;
     color: #aaaaaa;
    }
+   .placeholder {
+    color: #FFD700;
+    font-style: italic;
+   }
+/*
+   .placeholder:before {
+    content: '<';
+   }
+   .placeholder:after {
+    content: '>';
+   }
+*/
   </style>
  </head>
  <body>
-  <h2>Code Comparison: C, C++, Java, Python, JavaScript</h2>
+  <h2>Code Comparison: C, C++, Java, JavaScript, Python</h2>
   <table>
    <thead>
     <tr>
@@ -123,9 +135,9 @@ System.out.println("Hello World!");
      <td class="code"></td>
      <td class="code">
 <pre>
-print('Hello world!')<code class="comment">           # automatically adds end-of-line</code>
-print('Hello world!', end='\n')<code class="comment"> # manually adds end-of-line</code>
-print('Hello world!', end='')<code class="comment">   # end-of-line not added</code>
+print('Hello world!')
+print('Hello world!', end='\n')
+print('Hello world!', end='')
 </pre>
      </td>
     </tr>
@@ -133,23 +145,23 @@ print('Hello world!', end='')<code class="comment">   # end-of-line not added</c
      <th rowspan="3">Conditional</th>
      <td class="code" colspan="4">
 <pre>
-if (&lt;condition 1&gt;) {
-    ...
-} else if (&lt;condition 2&gt;) {
-    ...
+if (<code class="placeholder">condition1</code>) {
+    <code class="placeholder">...</code>
+} else if (<code class="placeholder">condition2</code>) {
+    <code class="placeholder">...</code>
 } else {
-    ...
+    <code class="placeholder">...</code>
 }
 </pre>
      </td>
      <td class="code">
 <pre>
-if condition1:
-    ...
-elif condition2:
-    ...
+if <code class="placeholder">condition1</code>:
+    <code class="placeholder">...</code>
+elif <code class="placeholder">condition2</code>:
+    <code class="placeholder">...</code>
 else:
-    ...
+    <code class="placeholder">...</code>
 </pre>
      </td>
     </tr>
@@ -158,13 +170,13 @@ else:
 <pre>
 switch (num) {
     case 1:
-        ...
+        <code class="placeholder">...</code>
         break;
     case 2:
-        ...
+        <code class="placeholder">...</code>
         break;
     default:
-        ...
+        <code class="placeholder">...</code>
 }
 </pre>
      </td>
@@ -183,17 +195,34 @@ match status:
     <tr>
      <td class="code" colspan="4">
 <pre>
-return (&lt;condition&gt;) ? "True" : "False";
+return (<code class="placeholder">condition</code>) ? "True" : "False";
 </pre>
      </td>
      <td class="code"></td>
     </tr>
     <tr>
      <th rowspan="4">Loop</th>
-     <td class="code">for</td>
-     <td class="code"></td>
-     <td class="code"></td>
-     <td class="code"></td>
+     <td class="code" colspan="3">
+<pre>
+for (int i = 0; i < 3; i++) {
+    <code class="placeholder">...</code>
+}
+</pre>
+     </td>
+     <td class="code">
+<pre>
+let i = 5;
+for (let i = 0; i < 3; i++) {
+    <code class="placeholder">...</code>
+}<code class="comment"> // here i is 5</code>
+
+var i = 5;
+for (var i = 0; i < 3; i++) {
+    <code class="placeholder">...</code>
+}<code class="comment"> // here i is 3</code>
+
+</pre>
+     </td>
      <td class="code">
 <pre>
 for x in range(3):
@@ -208,17 +237,40 @@ for x in range(1, 9, 3):
      </td>
     </tr>
     <tr>
-     <td class="code">foreach</td>
      <td class="code"></td>
-     <td class="code">
+     <td class="code" colspan="2">
 <pre>
 int arr[] = { 1, 2, 3, 4, 5};
 for (int i : arr) {
-    System.out.println( i );
+    <code class="comment">// access each element as 'i'</code>
 }  
 </pre>
      </td>
-     <td class="code"></td>
+     <td class="code">
+<pre>
+<code class="comment">// for-in the properties of an object</code>
+const box = {l: 6, w: 4, h: 2};
+let dim = 0;
+for (let p in box) {
+    dim += box[p];
+}
+
+<code class="comment">// for-of the values of an iterative object</code>
+const kids = ["Tom", "Jerry", "Spike"];
+let name = "";
+for (let i of kids) {
+    name += kids[i];
+}
+
+<code class="comment">// for-each array element</code>
+const numbers = [1, 2, 3, 4, 5];
+let result = "";
+numbers.forEach(doubleIt);
+function doubleIt(value) {
+  result += value * 2;
+}
+</pre>
+     </td>
      <td class="code">
 <pre>
 for x in 'Hello World':
@@ -227,33 +279,53 @@ for x in 'Hello World':
      </td>
     </tr>
     <tr>
-     <td class="code">while</td>
-     <td class="code"></td>
-     <td class="code"></td>
-     <td class="code"></td>
+     <td class="code" colspan="4">
+<pre>
+while (i < 5) {
+    <code class="placeholder">...</code>
+    i++;
+}
+</pre>
+     </td>
      <td class="code">
 <pre>
-while True:
-    ...
+while i < 5:
+    <code class="placeholder">...</code>
+    i += 1
 </pre>
      </td>
     </tr>
     <tr>
-     <td class="code">do while</td>
-     <td class="code"></td>
-     <td class="code"></td>
-     <td class="code"></td>
+     <td class="code" colspan="4">
+<pre>
+do {
+    <code class="placeholder">...</code>
+    i++;
+} while (i < 5);
+</pre>
+     </td>
      <td class="code"></td>
     </tr>
     <tr>
      <th>Function</th>
-     <td class="code">
+     <td class="code" colspan="3">
 <pre>
+int sum(int a, int b) {
+    return a + b;
+}
+
+int x = sum(1, 2);
 </pre>
      </td>
-     <td class="code"></td>
-     <td class="code"></td>
-     <td class="code"></td>
+     <td class="code">
+<pre>
+function sum(a, b) {
+    return a + b;
+}
+
+let x = sum(1, 2);
+</pre>
+     </td>
      <td class="code">
 <pre>
 def hello_world():
@@ -276,13 +348,13 @@ def get_sum(m, n):
      <td class="code">
 <pre>
 try:
-    ...<code class="comment">  # execute</code>
+    <code class="placeholder">...</code><code class="comment">  # execute</code>
 except [exception]:
-    ...<code class="comment">  # execute if exception is raised</code>
+    <code class="placeholder">...</code><code class="comment">  # execute if exception is raised</code>
 else:
-    ...<code class="comment">  # execute if no exception is raised</code>
+    <code class="placeholder">...</code><code class="comment">  # execute if no exception is raised</code>
 finally:
-    ...<code class="comment">  # execute whether exception is raised or not</code>
+    <code class="placeholder">...</code><code class="comment">  # execute whether exception is raised or not</code>
 </pre>
      </td>
     </tr>
@@ -364,6 +436,20 @@ print('Output = ', outputfile)
      <th>Object Oriented Programming</th>
      <td class="code">
 <pre>
+#include &lt;stdio.h&gt;
+
+struct Circle
+{
+    int radius;
+};
+
+int main()
+{
+    struct Circle myCircle;
+    myCircle.radius = 3;
+    printf("Diameter = %d\n", myCircle.radius*2);
+    return 0;
+}
 </pre>
      </td>
      <td class="code"></td>
