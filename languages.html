@@ -545,12 +545,115 @@ def main():
     print('Hello World!')
 if __name__=='__main__':
     main()
-
 </pre>
      </td>
     </tr>
     <tr>
      <th>Operators</th>
+     <td class="code">
+<pre>
+<code class="comment"> 1) Postfix:</code> ()<code class="comment">,</code> []<code class="comment">,</code> -&gt;<code class="comment">,</code> .<code class="comment">,</code> ++<code class="comment">,</code> --
+<code class="comment"> 2) Unary:</code> +<code class="placeholder">expr</code><code class="comment">,</code> -<code class="placeholder">expr</code><code class="comment">,</code> !<code class="placeholder">expr</code><code class="comment">,</code> ~<code class="placeholder">expr</code><code class="comment">,</code> ++<code class="placeholder">expr</code><code class="comment">,</code> --<code class="placeholder">expr</code><code class="comment">,</code> (<code class="placeholder">type</code>)*<code class="comment">,</code> &amp;<code class="comment">,</code> sizeof
+<code class="comment"> 3) Multiplicative:</code> *<code class="comment">,</code> /<code class="comment">,</code> %
+<code class="comment"> 4) Additive:</code> +<code class="comment">,</code> -
+<code class="comment"> 5) Shift:</code> &gt;&gt;<code class="comment">,</code> &lt;&lt;
+<code class="comment"> 6) Relational:</code> &lt;<code class="comment">,</code> &lt;=<code class="comment">,</code> &gt;<code class="comment">,</code> &gt;=
+<code class="comment"> 7) Equality:</code> ==<code class="comment">,</code> !=
+<code class="comment"> 8) Bitwise AND:</code> &amp;
+<code class="comment"> 9) Bitwise XOR:</code> ^
+<code class="comment">10) Bitwise OR:</code> |
+<code class="comment">11) Logical AND:</code> &amp;&amp;
+<code class="comment">12) Logical OR:</code> ||
+<code class="comment">13) Ternary:</code> ?:
+<code class="comment">14) Assignment:</code>=<code class="comment">,</code> +=<code class="comment">,</code> -=<code class="comment">,</code> *=<code class="comment">,</code> /=<code class="comment">,</code> %=<code class="comment">,</code> &gt;&gt;=<code class="comment">,</code> &lt;&lt;=<code class="comment">,</code> &amp;=<code class="comment">,</code> ^=<code class="comment">,</code> |=
+<code class="comment">15) Comma:</code> ,
+</pre>
+     </td>
+     <td class="code">
+<pre>
+<code class="comment"> 1) Scope resolution:</code> ::
+<code class="comment"> 2) Postfix:</code> ++<code class="comment">,</code> --<code class="comment">,</code> <code class="placeholder">type</code>()<code class="comment">,</code> <code class="placeholder">type</code>{}<code class="comment">,</code> ()<code class="comment">,</code> []<code class="comment">,</code> .<code class="comment">,</code> -&gt;
+<code class="comment"> 3) Prefix:</code> ++<code class="comment">,</code> --<code class="comment">,</code> +<code class="comment">,</code> -<code class="comment">,</code> !<code class="comment">,</code> ~<code class="comment">,</code> (<code class="placeholder">type</code>)<code class="comment">,</code> *<code class="comment">,</code> &amp;<code class="comment">,</code> sizeof<code class="comment">,</code> co_await<code class="comment">,</code> new new[]<code class="comment">,</code> delete delete[]
+<code class="comment"> 4) Pointer to member:</code> .*<code class="comment">,</code> ->*
+<code class="comment"> 5) Multiplicative:</code> *<code class="comment">, </code>/<code class="comment">, </code>%
+<code class="comment"> 6) Additive:</code> +<code class="comment">, </code>-
+<code class="comment"> 7) Shift:</code> &lt;&lt;<code class="comment">, </code>&gt;&gt;<code class="comment">, </code>&gt;&gt;&gt;
+<code class="comment"> 8) 3-way comparison:</code> &lt;=&gt;
+<code class="comment"> 9) Relational:</code> &lt;<code class="comment">,</code> &lt;=<code class="comment">,</code> &gt;<code class="comment">,</code> &gt;=
+<code class="comment">10) Equality:</code> ==<code class="comment">,</code> !=
+<code class="comment">12) Bitwise AND:</code> &amp;
+<code class="comment">13) Bitwise XOR:</code> ^
+<code class="comment">14) Bitwise OR:</code> |
+<code class="comment">15) Logical AND:</code> &amp;&amp;
+<code class="comment">16) Logical OR:</code> ||
+<code class="comment">17) Ternary:</code> ?:<code class="comment">,</code> throw<code class="comment">,</code> co_yield<code class="comment">,</code> =<code class="comment">,</code> +=<code class="comment">,</code> -=<code class="comment">,</code> *=<code class="comment">,</code> /=<code class="comment">,</code> %=<code class="comment">,</code> &lt;&lt;=<code class="comment">,</code> &gt;&gt;=<code class="comment">,</code> &amp;=<code class="comment">,</code> ^=<code class="comment">,</code> |=
+<code class="comment">18) Comma:</code> ,
+</pre>
+     </td>
+     <td class="code">
+<pre>
+<code class="comment"> 1) Unary Postfix:</code> ++<code class="comment">,</code> --
+<code class="comment"> 2) Unary Prefix:</code> ++<code class="comment">, </code>--<code class="comment">, </code>+<code class="comment">, </code>-<code class="comment">, </code>~<code class="comment">, </code>!
+<code class="comment"> 3) Multiplicative:</code> *<code class="comment">, </code>/<code class="comment">, </code>%
+<code class="comment"> 4) Additive:</code> +<code class="comment">, </code>-
+<code class="comment"> 5) Shift:</code> &lt;&lt;<code class="comment">, </code>&gt;&gt;<code class="comment">, </code>&gt;&gt;&gt;
+<code class="comment"> 6) Relational:</code> &lt;<code class="comment">, </code>&gt;<code class="comment">, </code>&lt;=<code class="comment">, </code>&gt;=<code class="comment">, </code>instanceof
+<code class="comment"> 7) Equality:</code> ==<code class="comment">, </code>!=
+<code class="comment"> 8) Bitwise AND:</code> &amp;
+<code class="comment"> 9) Bitwise XOR:</code> ^
+<code class="comment">10) Bitwise OR:</code> |
+<code class="comment">11) Logical AND:</code> &amp;&amp;
+<code class="comment">12) Logical OR:</code> ||
+<code class="comment">13) Ternary:</code> ?<code class="comment">, </code>:
+<code class="comment">14) Assignment:</code> =<code class="comment">, </code>+=<code class="comment">, </code>-=<code class="comment">, </code>*=<code class="comment">, </code>/=<code class="comment">, </code>%=<code class="comment">, </code>&amp;=<code class="comment">, </code>^=<code class="comment">, </code>|=<code class="comment">, </code>&lt;&lt;=<code class="comment">, </code>&gt;&gt;=<code class="comment">, </code>&gt;&gt;&gt;=
+</pre>
+     </td>
+     <td class="code">
+<pre>
+<code class="comment">1) unary:</code> <code class="placeholder">expr</code>++<code class="comment">, </code><code class="placeholder">expr</code>--<code class="comment">, </code>++<code class="placeholder">expr</code> <code class="comment">, </code>--<code class="placeholder">expr</code><code class="comment">,</code> -<code class="placeholder">expr</code><code class="comment">,</code> !
+<code class="comment">2) multiplicative:</code> *<code class="comment">,</code> /<code class="comment">,</code> %
+<code class="comment">3) additive:</code> +<code class="comment">,</code> -
+<code class="comment">4) relational:</code> &lt;<code class="comment">,</code> &lt;=<code class="comment">,</code> &gt;<code class="comment">,</code> &gt;=
+<code class="comment">5) equality:</code> ==<code class="comment">,</code> !=<code class="comment">,</code> ===<code class="comment">,</code> !==
+<code class="comment">6) logical:</code> &amp;&amp;<code class="comment">,</code> ||
+<code class="comment">7) ternary:</code> ?:
+<code class="comment">8) assignment:</code> =<code class="comment">,</code> +=<code class="comment">,</code> -=<code class="comment">,</code> *=<code class="comment">,</code> /=<code class="comment">,</code> %=
+</pre>
+     </td>
+     <td class="code">
+<pre>
+<code class="comment"># Arithmetic</code>
++, -, *, /, %
+**  <code class="comment"># Exponentiation e.g., x ** y</code>
+//  <code class="comment"># Floor division e.g., x // y</code>
+<code class="comment"># Assignment</code>
+=, +=, -=, *=, /=, %=, //=, **=, &amp;=, |=, ^=, &gt;&gt;=, &lt;&lt;=
+<code class="comment"># Comparison</code>
+==, !=, &gt;, &lt;, &gt;=, &lt;=
+<code class="comment"># Logical</code>
+and, or, not
+<code class="comment"># Identity (compare objects)</code>
+is, is not          <code class="comment"># e.g., x is y, x is not y</code>
+<code class="comment"># Membership</code>
+in, not in          <code class="comment"># e.g., x in y, x not in y</code>
+<code class="comment"># Bitwise</code>
+&amp;, |                <code class="comment"># AND, OR</code>
+^                   <code class="comment"># XOR</code>
+~                   <code class="comment"># NOT</code>
+&lt;&lt;, &gt;&gt;              <code class="comment"># Zero-filled left or right shift</code>
+</pre>
+     </td>
+    </tr>
+    <tr>
+     <th>Execution Timing</th>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code"></td>
+     <td class="code"></td>
+    </tr>
+    <tr>
+     <th>Multithreading</th>
      <td class="code"></td>
      <td class="code"></td>
      <td class="code"></td>
