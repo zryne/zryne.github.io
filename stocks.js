@@ -1,19 +1,14 @@
-//const BtnAdd = document.querySelector(".btn-add");
-
+const BtnAdd = document.querySelector(".btn-add");
 const DivContainer = document.getElementById("div-container");
 
-//BtnAdd.addEventListener("click", showAlert);
-//BtnAdd.addEventListener("click", AddNew);
+BtnAdd.addEventListener("click", AddNew);
 
 function AddNew() {
   const newDiv = document.createElement("div");
+  newDiv.innerHTML = "<b>Hello</b>";
   console.log("add");
   newDiv.classList.add("div-shadow");
   DivContainer.appendChild(newDiv);
-}
-
-function showAlert() {
-  alert("Hello")
 }
 
 function myFunction() {
