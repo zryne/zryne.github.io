@@ -1,19 +1,63 @@
 <html>
 <head>
  <title>Zinnu Ryne</title>
+ <style type="text/css">
+  .container
+  {
+   width: 400px;
+   height: 400px;
+   margin: 0 auto;
+   color: #fff;
+   border-radius: 1px;
+   display: grid;
+   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  }
+  .block
+  {
+   border: 1px solid #dddddd;
+   border-radius: 15px;
+   font-family: Helvetica;
+   font-weight: bold;
+   font-size: 4em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+ </style>
 </head>
 <body>
- <table>
-  <tr>
-   <td><a href="languages.html"><img src="graphics/c.png" height="64"></a></td>
-   <td><a href="languages.html"><img src="graphics/c++.png" height="64"></a></td>
-   <td><a href="java.html"><img src="graphics/java.png" height="64"></a></td>
-   <td><a href="languages.html"><img src="graphics/python.png" height="64"></a></td>
-   <td><a href="languages.html"><img src="graphics/javascript.png" height="64"></a></td>
-   <td><a href="vim.html"><img src="graphics/vim.png" height="64"></a></td>
-   <td><a href="git.html"><img src="graphics/git.png" height="64"></a></td>
-   <td><a href="https://protipstrickshacks.blogspot.com/"><img src="graphics/blog.png" height="64"></a></td>
-  </tr>
- </table>
+ <div class="container">
+  <div class="block">
+   <a href="languages.html"><img src="graphics/c.png" height="64"></a>
+  </div>
+  <div class="block">
+   <a href="languages.html"><img src="graphics/c++.png" height="64"></a>
+  </div>
+  <div class="block">
+   <a href="java.html"><img src="graphics/java.png" height="64"></a>
+  </div>
+  <div class="block">
+   <a href="languages.html"><img src="graphics/python.png" height="64"></a>
+  </div>
+  <div class="block">
+   <a href="languages.html"><img src="graphics/javascript.png" height="64"></a>
+  </div>
+  <div class="block">
+  </div>
+  <div class="block">
+   <a href="vim.html"><img src="graphics/vim.png" height="64"></a>
+  </div>
+  <div class="block">
+   <a href="git.html"><img src="graphics/git.png" height="64"></a>
+  </div>
+  <div class="block">
+   <a href="https://protipstrickshacks.blogspot.com/"><img src="graphics/blog.png" height="64"></a>
+  </div>
+ </div>
 </body>
 </html>
+<!--
+   References:
+     https://codepen.io/shammadahmed/pen/JOWEGW
+     https://dev.to/ayushmanbthakur/how-to-make-tic-tac-toe-in-browser-with-html-css-and-js-28ed
+-->
