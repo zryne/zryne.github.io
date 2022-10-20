@@ -12,7 +12,7 @@
    <td>Highlight all "word" in the current file.<br>Go to next "word".<br>Go to previous "word".</td>
   </tr>
   <tr>
-   <th rowspan="5">Substitution</th>
+   <th rowspan="6">Substitution</th>
    <td class="code">:%s/\s\+/\r/g</td>
    <td>Replace spaces (one or contiguous) with newlines in the whole file.</td>
   </tr>
@@ -31,6 +31,10 @@
   <tr>
    <td class="code">~</td>
    <td>Change the character's case under the cursor.</td>
+  </tr>
+  <tr>
+   <td class="code">:g/^$/d</td>
+   <td>Delete all empty lines.</td>
   </tr>
   <tr>
    <th rowspan="3">File Handling</th>
