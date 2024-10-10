@@ -270,6 +270,10 @@
    <td class="code">git diff &lt;branch&gt; origin/&lt;branch&gt; | grep diff</td>
    <td>List files that have changed between remote and local repo in the specified branch.</td>
   </tr>
+  <tr>
+   <td class="code">git diff &lt;branch&gt; origin/&lt;branch&gt; | grep diff | awk '{print $3}'</td>
+   <td>List files that have changed between remote and local repo in the specified branch and print only the 3rd element.</td>
+  </tr>
  </table>
  Go to <a href="#top">top</a>.
 </div>
