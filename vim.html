@@ -6,15 +6,33 @@
 <body>
  <h1>Vim Quick Reference</h1>
  <table>
+  <!-- ROW 1 -->
   <tr>
-   <th rowspan="2">Find</th>
-   <td class="code">:/&lt;word&gt;<br>n<br>Shft+n</td>
-   <td>Highlight all "word" in the current file.<br>Go to next "word".<br>Go to previous "word".</td>
+   <th rowspan="6">Matching</th>
+   <td class="code">:/WORD<br>n<br>Shft+n</td>
+   <td>Highlight all WORD in the current file.<br>Go to next WORD.<br>Go to previous WORD.</td>
   </tr>
   <tr>
    <td class="code">:/^$</td>
    <td>Highlight all empty lines.</td>
   </tr>
+  <tr>
+   <td class="code">/\d\+</td>
+   <td>Matches any whole number (e.g., 42, 100).</td>
+  </tr>
+  <tr>
+   <td class="code">/\d\+\.\d\+</td>
+   <td>Matches a decimal number (e.g., 3.14).</td>
+  </tr>
+  <tr>
+   <td class="code">/\<\d\{3}\></td>
+   <td>Matches an exact 3-digit number using word boundaries (\< and \>) to avoid matching 3 digits inside a larger number like 12345.</td>
+  </tr>
+  <tr>
+   <td class="code">/\d\{2,4}</td>
+   <td>Matches numbers that are between 2 and 4 digits long.</td>
+  </tr>
+  <!-- ROW 2 -->
   <tr>
    <th rowspan="6">Substitution</th>
    <td class="code">:%s/\s\+/\r/g</td>
@@ -37,9 +55,44 @@
    <td>Change the character's case under the cursor.</td>
   </tr>
   <tr>
+   <td class="code">:%s/\s\+/\r/g</td>
+   <td>Replace all blanks with new line.</td>
+  </tr>
+  <!-- ROW 3 -->
+  <tr>
+   <th rowspan="8">Deletion</th>
+   <td class="code">:v/^pattern/d</td>
+   <td>Keep only lines starting with pattern.</td>
+  </tr>
+  <tr>
+   <td class="code">:%s/x.*//</td>
+   <td>Delete character and everything after it.</td>
+  </tr>
+  <tr>
+   <td class="code">:%s/\(x\).*/\1/</td>
+   <td>Delete everything after the character.</td>
+  </tr>
+  <tr>
+   <td class="code">:%s/x\zs.*//g</td>
+   <td>Delete character and everything after it, across every line.</td>
+  </tr>
+  <tr>
    <td class="code">:g/^$/d</td>
    <td>Delete all empty lines.</td>
   </tr>
+  <tr>
+   <td class="code"></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td class="code"></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td class="code"></td>
+   <td></td>
+  </tr>
+  <!-- ROW 4 -->
   <tr>
    <th rowspan="3">File Handling</th>
    <td class="code">:split &lt;file&gt;<br>ctrl+w</td>
@@ -53,6 +106,7 @@
    <td class="code">:r! &lt;cmd&gt;</td>
    <td>Execute the &lt;cmd&gt; and insert output at the cursor.</td>
   </tr>
+  <!-- ROW 5 -->
   <tr>
    <th rowspan="2">Sorting</th>
    <td class="code">:!sort</td>
@@ -62,6 +116,7 @@
    <td>Sort (in ascending order) only lines 2-7 in the current file.</td>
   <tr>
   </tr>
+  <!-- ROW 6 -->
   <tr>
    <th>Cursor Movement</th>
    <td class="code">h / l<br>j / k<br>w / W<br>b / B<br>0<br>$</td>
